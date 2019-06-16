@@ -89,7 +89,7 @@ $DifferenceFolders = Compare-Object $KeyFolders $CopyFolders -PassThru
 ForEach ($DifferenceFoldersSong in $DifferenceFolders) {
     Write-Host "Copying $DifferenceFoldersSong"
     Try {
-        Copy-Item $BeatSaberDir\CustomSongs\$DifferenceFoldersSong -Recurse '$BeatSaberDir\Beat Saber_Data\CustomLevels\' -ErrorAction Stop
+        Copy-Item $BeatSaberDir\CustomSongs\$DifferenceFoldersSong -Recurse '.\Beat Saber_Data\CustomLevels\' -ErrorAction Stop
     }
     Catch {
         Write-Host "Failed to copy $DifferenceFoldersSong`: $_"
